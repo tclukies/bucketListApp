@@ -1,14 +1,12 @@
 <template>
 <div>
-    <a href='#'>About</a>
-    <a href='#'>FAQ</a>
-    <a href='#'>Contact Us</a>
+<p>Test test. This is modal</p>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'Footer',
+  name: 'Modal',
   data() {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -18,4 +16,7 @@ export default {
 </script>
  
 <style>
+/* p {
+    color: blue;
+} */
 </style>
