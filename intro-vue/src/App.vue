@@ -2,9 +2,8 @@
   <div id="app">
 
     <Modal />
-       
-<Footer />
-    <router-view/>
+    <Footer />
+    <!-- <router-view/> -->
   </div>
 </template>
 
@@ -17,8 +16,8 @@ export default {
   name: 'App',
   components: {
     Modal,
-    Footer
-  }
+    Footer,
+  },
 };
 </script>
 
