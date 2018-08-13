@@ -4,20 +4,23 @@
     <Modal />
     <Footer />
     <!-- <router-view/> -->
+    <Header />
+    <Footer />
   </div>
 </template>
 
 <script>
-
-import Footer from './components/Footer';
-import Modal from './components/Modal';
+import Footer from "./components/Footer";
+import Modal from "./components/Modal";
+import Header from "./components/Header";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Modal,
     Footer,
-  },
+    Header
+  }
 };
 </script>
 

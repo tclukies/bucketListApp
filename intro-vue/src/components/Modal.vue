@@ -32,7 +32,4 @@ export default {
 </script>
  
 <style>
-/* p {
-    color: blue;
-} */
 </style>
