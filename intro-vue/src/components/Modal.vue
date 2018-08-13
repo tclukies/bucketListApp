@@ -8,7 +8,7 @@
             <label for='login'>New to Travel Bug?</label>
             <button type='submit' name='button'>Sign up now!</button>
         </form>
-            <form @submit.prevent='sendCredentials()'>
+        <form @submit.prevent='sendCredentials()'>
             <input v-model='firstName' placeholder='First Name' type='text' name='firstName' id='firstName' value=''>
             <input v-model='lastName' placeholder='Last Name' type='text' name='lastName' id='lastName' value=''>
             <input v-model='email' placeholder='Email' type='text' name='email' id='email' value=''>

@@ -5,6 +5,7 @@
     <Footer />
     <!-- <router-view/> -->
     <Header />
+    <AddCountry />
     <Footer />
   </div>
 </template>
@@ -13,13 +14,15 @@
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 import Header from "./components/Header";
+import AddCountry from "./components/AddCountry";
 
 export default {
   name: "App",
   components: {
     Modal,
     Footer,
-    Header
+    Header,
+    AddCountry
   }
 };
 </script>
