@@ -1,17 +1,19 @@
 <template>
 <div>
-    <p>Test test. I like cats. </p>
+    <a href='#'>About</a>
+    <a href='#'>FAQ</a>
+    <a href='#'>Contact Us</a>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'Footer',
+  name: "Footer",
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: "Welcome to Your Vue.js App"
     };
-  },
+  }
 };
 </script>
  
