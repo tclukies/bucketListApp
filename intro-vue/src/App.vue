@@ -6,6 +6,7 @@
     <!-- <router-view/> -->
     <Header />
     <AddCountry />
+    <MapConfig />
     <Footer />
   </div>
 </template>
@@ -15,6 +16,7 @@ import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 import Header from "./components/Header";
 import AddCountry from "./components/AddCountry";
+import MapConfig from "./components/MapConfig";
 
 export default {
   name: "App",
@@ -22,7 +24,8 @@ export default {
     Modal,
     Footer,
     Header,
-    AddCountry
+    AddCountry,
+    MapConfig
   }
 };
 </script>

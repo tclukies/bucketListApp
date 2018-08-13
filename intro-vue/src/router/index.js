@@ -4,6 +4,7 @@ import Modal from '@/components/Modal';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import AddCountry from '@/components/AddCountry';
+import MapConfig from '@/components/MapConfig';
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/',
       name: 'AddCountry',
       component: AddCountry,
+    },
+    {
+      path: '/',
+      name: 'MapConfig',
+      component: MapConfig,
     },
   ],
 });
