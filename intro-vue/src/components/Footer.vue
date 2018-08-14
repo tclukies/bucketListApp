@@ -1,8 +1,8 @@
 <template>
 <div>
-    <a href='#'>About</a>
-    <a href='#'>FAQ</a>
-    <a href='#'>Contact Us</a>
+    <router-link to='#'>About</router-link>
+    <router-link to='#'>FAQ</router-link>
+    <router-link to='#'>Contact Us</router-link>
     </div>
 </template>
 

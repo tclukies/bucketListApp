@@ -1,39 +1,23 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Modal from '@/components/Modal';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import AddCountry from '@/components/AddCountry';
-import MapConfig from '@/components/MapConfig';
+import Front from '../views/Front';
+import Main from '../views/Main';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
+  base: __dirname,
   routes: [
     {
       path: '/',
-      name: 'Footer',
-      component: Footer,
+      name: 'Front',
+      component: Front,
     },
     {
       path: '/',
-      name: 'Modal',
-      component: Modal,
-    },
-    {
-      path: '/',
-      name: 'Header',
-      component: Header,
-    },
-    {
-      path: '/',
-      name: 'AddCountry',
-      component: AddCountry,
-    },
-    {
-      path: '/',
-      name: 'MapConfig',
-      component: MapConfig,
+      name: 'Main',
+      component: Main,
     },
   ],
 });
