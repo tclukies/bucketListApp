@@ -22,10 +22,10 @@
 
 <script>
 export default {
-  name: "Modal",
+  name: 'Modal',
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      msg: 'Welcome to Your Vue.js App'
     };
   }
 };

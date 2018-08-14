@@ -11,27 +11,27 @@
 </template>
 
 <script>
-import Header from "./components/Header";
-import AddCountry from "./components/AddCountry";
-import MapConfig from "./components/MapConfig";
-import Footer from "./components/Footer";
-import Modal from "./components/Modal";
+import Header from '@/components/Header';
+import AddCountry from '@/components/AddCountry';
+import MapConfig from '@/components/MapConfig';
+import Footer from '@/components/Footer';
+import Modal from '@/components/Modal';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Modal,
     Footer,
     Header,
     AddCountry,
-    MapConfig
-  }
+    MapConfig,
+  },
 };
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
