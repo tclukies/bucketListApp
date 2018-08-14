@@ -5,7 +5,7 @@
         <form @submit.prevent='searchForCredentials()'>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
-            <button type='submit' name='button'>Login</button>
+            <router-link to='/main' tag='button'>Sign In</router-link>
             <label for='login'>New to Travel Bug?</label>
             <button v-on:click='seen =! seen' type='submit' name='button'>Sign up now!</button>
         </form>
