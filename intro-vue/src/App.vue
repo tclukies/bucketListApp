@@ -1,22 +1,21 @@
 <template>
   <div id="app">
-
-    <Modal />
-    <Footer />
-    <!-- <router-view/> -->
+    <!-- <Footer /> -->
+    <router-view/>
     <Header />
     <AddCountry />
     <MapConfig />
     <Footer />
+    <Modal />
   </div>
 </template>
 
 <script>
-import Footer from "./components/Footer";
-import Modal from "./components/Modal";
 import Header from "./components/Header";
 import AddCountry from "./components/AddCountry";
 import MapConfig from "./components/MapConfig";
+import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 export default {
   name: "App",
