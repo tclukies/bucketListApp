@@ -20,11 +20,11 @@ import Modal from '@/components/Modal';
 export default {
   name: 'App',
   components: {
-    Modal,
-    Footer,
     Header,
     AddCountry,
     MapConfig,
+    Footer,
+    Modal,
   },
 };
 </script>
