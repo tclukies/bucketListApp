@@ -12,7 +12,6 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
-  // Header,
   Footer,
   components: { App },
   template: '<App/>',

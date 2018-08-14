@@ -20,4 +20,13 @@ export default {
 </script>
 
 <style>
+template {
+  min-height: 100%;
+}
+
+#first{
+  display: flex;
+  flex-direction: column;
+  
+}
 </style>

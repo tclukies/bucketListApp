@@ -1,6 +1,6 @@
 <template>
 <div>
-    <a href='#'>Logout</a>
+    <router-link to='/' tag='button'>Logout</router-link>
     </div>
 </template>
 
