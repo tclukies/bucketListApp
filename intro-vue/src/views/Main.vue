@@ -2,8 +2,14 @@
 <div id='main'>
     <router-view></router-view>
     <Header />
+    <div class='horizontal'>
+    <div>
     <AddCountry />
+    </div>
+    <div>
     <MapConfig />
+    </div>
+    </div>
     <Footer />
     </div>
     
@@ -26,7 +32,12 @@ export default {
 </script>
 
 <style>
-#main{
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#main {
   display: flex;
   flex-direction: column;
   height: 90vh;
