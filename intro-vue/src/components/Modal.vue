@@ -13,8 +13,12 @@
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
             <router-link to='/main' tag='button'>Sign In</router-link>
+            <div>
             <label for='login'>New to Travel Bug?</label>
+            </div>
+            <div>
             <button v-on:click='seen =! seen, logseen =! logseen' type='submit' name='button'>Sign up now!</button>
+            </div>
         </form>
         </div>
         </slot>
@@ -58,7 +62,6 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
