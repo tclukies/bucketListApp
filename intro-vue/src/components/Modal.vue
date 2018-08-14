@@ -18,7 +18,7 @@
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='passWord' id='passWord' value=''>
             <input placeholder='Confirm Password' type='text' name='confirmPassword' id='confirmPassword' value=''>
-            <button type='submit' name='button'>Create Profile</button>
+            <router-link to='/main' tag='button'>Create Profile</router-link>
         </form>
         </div>
     </div>
