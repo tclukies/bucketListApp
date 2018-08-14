@@ -3,20 +3,18 @@
   <div>
 <h1>Welcome to Travel Bug</h1>
 </div>
-<!-- <script type='text/x-template' id='modal-template'>
-  <transition name='modal'> -->
     <div class='modal-backdrop'>
       <div class='modal'>
         <div class='modal-container'>
           <div class='modal-header'>
             <slot name='login'>
-      <div id='signin'>
+      <div v-if='logseen' id='signin'>
         <form @submit.prevent='searchForCredentials()'>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
             <router-link to='/main' tag='button'>Sign In</router-link>
             <label for='login'>New to Travel Bug?</label>
-            <button v-on:click='seen =! seen' type='submit' name='button'>Sign up now!</button>
+            <button v-on:click='seen =! seen, logseen =! logseen' type='submit' name='button'>Sign up now!</button>
         </form>
         </div>
         </slot>
@@ -37,8 +35,6 @@
                 </div>
               </div>
             </div>
-          <!-- </transition>
-        </script> -->
     </div>
 </template>
 
@@ -48,7 +44,8 @@ export default {
   data() {
     return {
       seen: false,
-      name: 'modal',
+      logseen: true,
+      name: "modal"
     };
   }
 };
@@ -56,22 +53,21 @@ export default {
  
 <style>
 .modal-backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  .modal {
-    background: #FFFFFF;
-    box-shadow: 2px 2px 20px 1px;
-    overflow-x: auto;
-    display: flex;
-    flex-direction: column;
-  }
-
+.modal {
+  background: #ffffff;
+  box-shadow: 2px 2px 20px 1px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+}
 </style>
