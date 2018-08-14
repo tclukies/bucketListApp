@@ -1,7 +1,16 @@
 <template>
 <div>
+  <div>
 <h1>Welcome to Travel Bug</h1>
-<div id='sigin'>
+</div>
+<!-- <script type='text/x-template' id='modal-template'>
+  <transition name='modal'> -->
+    <div class='modal-backdrop'>
+      <div class='modal'>
+        <div class='modal-container'>
+          <div class='modal-header'>
+            <slot name='login'>
+      <div id='signin'>
         <form @submit.prevent='searchForCredentials()'>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
@@ -10,6 +19,8 @@
             <button v-on:click='seen =! seen' type='submit' name='button'>Sign up now!</button>
         </form>
         </div>
+        </slot>
+        <slot name='register'>
         <div v-if='seen' id='registrationForm'>
         <form @submit.prevent='sendCredentials()'>
             <input placeholder='First Name' type='text' name='firstName' id='firstName' value=''>
@@ -21,6 +32,13 @@
             <router-link to='/main' tag='button'>Create Profile</router-link>
         </form>
         </div>
+             </slot>       
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- </transition>
+        </script> -->
     </div>
 </template>
 
@@ -30,10 +48,30 @@ export default {
   data() {
     return {
       seen: false,
+      name: 'modal',
     };
   }
 };
 </script>
  
 <style>
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .modal {
+    background: #FFFFFF;
+    box-shadow: 2px 2px 20px 1px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
 </style>
