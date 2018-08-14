@@ -27,6 +27,7 @@ template {
 #first{
   display: flex;
   flex-direction: column;
-  
+  height: 95vh;
+  justify-content: space-between;
 }
 </style>
