@@ -1,7 +1,9 @@
 <template>
 <div id='main'>
     <router-view></router-view>
+    <div class='header'>
     <Header />
+    </div>
     <div class='horizontal'>
     <div>
     <AddCountry />
@@ -36,6 +38,10 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
 }
 #main {
   display: flex;
