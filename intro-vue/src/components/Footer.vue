@@ -1,6 +1,6 @@
 <template>
 <div>
-    <router-link to='#'>About</router-link>
+    <router-link to='/main'>About</router-link>
     <router-link to='#'>FAQ</router-link>
     <router-link to='#'>Contact Us</router-link>
     </div>
