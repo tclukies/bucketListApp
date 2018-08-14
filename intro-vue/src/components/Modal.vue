@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class='content'>
   <div>
 <h1>Welcome to Travel Bug</h1>
 </div>
@@ -69,5 +69,9 @@ export default {
   overflow-x: auto;
   display: flex;
   flex-direction: column;
+}
+#signin {
+  display: flex;
+  flex-wrap: column;
 }
 </style>
