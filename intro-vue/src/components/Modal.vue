@@ -10,24 +10,44 @@
             <slot name='login'>
       <div v-if='logseen' id='signin'>
         <form @submit.prevent='searchForCredentials()'>
+          <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
             <router-link to='/main' tag='button'>Sign In</router-link>
+            <div>
             <label for='login'>New to Travel Bug?</label>
+            </div>
+            <div>
             <button v-on:click='seen =! seen, logseen =! logseen' type='submit' name='button'>Sign up now!</button>
+            </div>
         </form>
         </div>
         </slot>
         <slot name='register'>
         <div v-if='seen' id='registrationForm'>
         <form @submit.prevent='sendCredentials()'>
+          <h3>We are excited for your new ventures!</h3>
+          <div>
             <input placeholder='First Name' type='text' name='firstName' id='firstName' value=''>
+            </div>
+            <div>
             <input placeholder='Last Name' type='text' name='lastName' id='lastName' value=''>
+            </div>
+            <div>
             <input placeholder='Email' type='text' name='email' id='email' value=''>
+            </div>
+            <div>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
+            </div>
+            <div>
             <input placeholder='Password' type='text' name='passWord' id='passWord' value=''>
+            </div>
+            <div>
             <input placeholder='Confirm Password' type='text' name='confirmPassword' id='confirmPassword' value=''>
+            </div>
+            <div>
             <router-link to='/main' tag='button'>Create Profile</router-link>
+            </div>
         </form>
         </div>
              </slot>       
@@ -58,7 +78,6 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,4 +93,5 @@ export default {
   display: flex;
   flex-wrap: column;
 }
+
 </style>
