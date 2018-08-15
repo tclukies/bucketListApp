@@ -12,7 +12,7 @@
         <form>
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
-            <input placeholder='Password' type='text' name='password' id='password' value=''>
+            <input placeholder='Password' type='password' name='password' id='password' value=''>
             <input @click.prevent="bool" type='submit' value='Sign In'>
             <div>
             <label for='login'>New to Travel Bug?</label>
