@@ -1,7 +1,7 @@
 <template>
-<div>
-    <a href='#'>Logout</a>
-    </div>
+  <div>
+    <router-link to='/' tag='button'>Logout</router-link>
+  </div>
 </template>
 
 <script>
