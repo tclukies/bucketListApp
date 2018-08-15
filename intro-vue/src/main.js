@@ -5,6 +5,16 @@ import App from './App';
 import router from './router';
 // import Header from './components/Header';
 import Footer from './components/Footer';
+import * as VueGoogleMaps from 'vue2-google-maps'
+ 
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyASCy4vaXQzI49aGBeT6E1if9kGl9Dp2gA',
+    libraries: 'places'
+ 
+  },
+ 
+})
 
 Vue.config.productionTip = false;
 
