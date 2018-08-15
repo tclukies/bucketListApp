@@ -75,7 +75,7 @@ export default {
       }
     };
   },
-    mounted() {
+  mounted() {
     fetch(this.registerURL, {
       method: "get",
       mode: "cors",
@@ -87,17 +87,20 @@ export default {
       });
     });
   },
-    methods: {
+  methods: {
     verified() {
       console.log("verified");
-      console.log(resp);
-      this.bool = !this.bool;
+      for (i = 0; i < resp.length; i++) {
+        this.bool = resp.profile[i].username;
+      }
     },
     notVerified() {
       console.log("notVerified");
-      this.bool = !this.bool;
+      for (i = 0; i < resp.length; i++) {
+        this.bool = resp.profile[i].password;
+      }
     }
-  },
+  }
 };
 </script>
  
