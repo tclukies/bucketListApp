@@ -9,11 +9,12 @@
           <div class='modal-header'>
             <slot name='login'>
       <div v-if='logseen' id='signin'>
-        <form @submit.prevent='searchForCredentials()'>
+        <form action='/main'>
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
-            <router-link to='/main' tag='button'>Sign In</router-link>
+            <!-- <router-link to='/main' @click='bool ? verified() : notVerified()' tag='button'>Sign In</router-link> -->
+            <input type='submit' value='Sign In'>
             <div>
             <label for='login'>New to Travel Bug?</label>
             </div>
@@ -65,8 +66,19 @@ export default {
     return {
       seen: false,
       logseen: true,
-      name: "modal"
+      name: "modal",
+      bool: true
     };
+  },
+  methods: {
+    verified() {
+      console.log("verified");
+      this.bool = !this.bool;
+    },
+    notVerified() {
+      console.log("notVerified");
+      this.bool = !this.bool;
+    }
   }
 };
 </script>
@@ -93,5 +105,4 @@ export default {
   display: flex;
   flex-wrap: column;
 }
-
 </style>
