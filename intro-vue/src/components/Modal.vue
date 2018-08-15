@@ -88,7 +88,6 @@ export default {
         console.log(this.profileData.profile);
       });
   },
-
   // onSubmit(evt) {
   //   evt.preventDefault();
   //   return fetch(this.signinURL, {
@@ -113,7 +112,7 @@ export default {
 
   methods: {
     verified() {
-      console.log("verified");
+      // this.router.go('/main')
     },
     notVerified() {
       console.log("notVerified");
@@ -122,7 +121,6 @@ export default {
       console.log("bool is called");
       // console.log(document.querySelector("#username").value);
       // console.log(this.profileData.profile[0].username);
-      
       
       for (let i = 0; i < this.profileData.profile.length; i++) {
         console.log(this.profileData.profile.length)
