@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id='app'>
     <router-view/>
 
   </div>
@@ -12,7 +12,7 @@ export default {
   name: "Register",
   data() {
     return {
-      registerURL: "https://gvideos-api.herokuapp.com/auth/register",
+      registerURL: "https://travel-bug-backend.herokuapp.com/profiles",
       form: {
         username: "",
         password: ""
@@ -21,28 +21,27 @@ export default {
       // users: [],
     };
   },
-  methods: {
-    onLoad(evt) {
-      evt.preventDefault();
-      return fetch(this.API_URL, {
-        method: "get",
-        headers: new Headers({ "Content-Type": "application/json" }),
-        body: JSON.stringify(this.form)
-      }).then(resp => {
+  mounted() {
+    fetch(this.registerURL, {
+      method: "get",
+      mode: "cors",
+      credentials: "same-origin",
+      headers: new Headers({ "Content-Type": "application/json" })
+    }).then(resp => {
+      // if (!resp.ok) {
+      //   if (resp.status >= 400 || resp.status < 500) {
+      //     return resp.json().then(data => {
+      //       const err = { errorMessage: data.message };
+      //       throw err;
+      //     });
+      //   }
+      //   const err = { errorMessage: 'Blah' };
+      //   throw err;
+      // }
+      return resp.json().then(resp => {
         console.log(resp);
-        if (!resp.ok) {
-          if (resp.status >= 400 || resp.status < 500) {
-            return resp.json().then(data => {
-              const err = { errorMessage: data.message };
-              throw err;
-            });
-          }
-          const err = { errorMessage: "Blah" };
-          throw err;
-        }
-        return resp.json();
       });
-    }
+    });
   }
 };
 </script>
