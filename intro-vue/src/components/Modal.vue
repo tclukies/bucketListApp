@@ -59,6 +59,9 @@
 </template>
 
 <script>
+
+
+
 export default {
   name: "Modal",
   data() {
@@ -112,7 +115,7 @@ export default {
 
   methods: {
     verified() {
-      // this.router.go('/main')
+      this.router.go("/main");
     },
     notVerified() {
       console.log("notVerified");
@@ -121,11 +124,11 @@ export default {
       console.log("bool is called");
       // console.log(document.querySelector("#username").value);
       // console.log(this.profileData.profile[0].username);
-      
+
       for (let i = 0; i < this.profileData.profile.length; i++) {
-        console.log(this.profileData.profile.length)
-        console.log(this.profileData.profile[i].username)
-        
+        console.log(this.profileData.profile.length);
+        console.log(this.profileData.profile[i].username);
+
         if (
           document.querySelector("#username").value ===
             this.profileData.profile[i].username &&
