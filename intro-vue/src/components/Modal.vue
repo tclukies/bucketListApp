@@ -9,7 +9,7 @@
           <div class='modal-header'>
             <slot name='login'>
       <div v-if='logseen' id='signin'>
-        <form action='/main'>
+        <form>
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
@@ -18,7 +18,7 @@
             <label for='login'>New to Travel Bug?</label>
             </div>
             <div>
-            <button v-on:click='seen =! seen, logseen =! logseen' type='submit' name='button'>Sign up now!</button>
+            <button v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</button>
             </div>
         </form>
         </div>
@@ -71,7 +71,8 @@ export default {
       form: {
         username: "",
         password: ""
-      }
+      },
+      profileData: null
     };
   },
   mounted() {
@@ -80,12 +81,14 @@ export default {
       mode: "cors",
       credentials: "same-origin",
       headers: new Headers({ "Content-Type": "application/json" })
-    }).then(resp => {
-      return resp.json().then(resp => {
-        console.log(resp);
+    })
+      .then(resp => resp.json())
+      .then(resp => {
+        this.profileData = resp;
+        console.log(this.profileData.profile);
       });
-    });
   },
+
   // onSubmit(evt) {
   //   evt.preventDefault();
   //   return fetch(this.signinURL, {
@@ -116,15 +119,17 @@ export default {
       console.log("notVerified");
     },
     bool() {
-      for (i = 0; i < resp.length; i++) {
+      console.log("bool is called");
+      for (let i = 0; i < this.profileData.profile.length; i++) {
         if (
-          document.querySelector("#username").value ==
-            resp.profile[i].username &&
-          document.querySelector("#password").value == resp.profile[i].password
+          document.querySelector("#username").value ===
+            this.profileData.profile[i].username &&
+          document.querySelector("#password").value ===
+            this.profileData.profile[i].password
         ) {
           return verified();
         } else {
-          return notVerified();
+          return this.notVerified();
         }
       }
     }
