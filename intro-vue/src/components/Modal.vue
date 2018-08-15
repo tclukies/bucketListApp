@@ -3,7 +3,7 @@
   <div>
 <h1>Welcome to Travel Bug</h1>
 </div>
-    <div class='modal-backdrop'>
+    <div>
       <div class='modal'>
         <div class='modal-container'>
           <div class='modal-header'>
