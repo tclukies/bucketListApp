@@ -6,15 +6,24 @@
 </template>
 
 <script>
-
+const API_URL = "https://travel-bug-backend.herokuapp.com/profiles";
 export default {
-
+  data() {
+    return {
+      credentials: null
+    };
+  },
+  mounted() {
+    this.axios.get(API_URL).then(response => {
+      console.log(response.data);
+    });
+  }
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
