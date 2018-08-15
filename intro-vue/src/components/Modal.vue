@@ -13,7 +13,7 @@
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
-            <input @click="bool ? verified() : notVerified()" type='submit' value='Sign In'>
+            <input @click="bool" type='submit' value='Sign In'>
             <div>
             <label for='login'>New to Travel Bug?</label>
             </div>
@@ -66,9 +66,8 @@ export default {
       seen: false,
       logseen: true,
       name: "modal",
-      bool: true,
-      // name: "Register",
-      registerURL: "https://travel-bug-backend.herokuapp.com/profiles",
+      // bool: true,
+      signinUrl: "https://travel-bug-backend.herokuapp.com/profiles",
       form: {
         username: "",
         password: ""
@@ -76,7 +75,7 @@ export default {
     };
   },
   mounted() {
-    fetch(this.registerURL, {
+    fetch(this.signinUrl, {
       method: "get",
       mode: "cors",
       credentials: "same-origin",
@@ -87,17 +86,46 @@ export default {
       });
     });
   },
+  // onSubmit(evt) {
+  //   evt.preventDefault();
+  //   return fetch(this.signinURL, {
+  //     method: "post",
+  //     headers: new Headers({ "Content-Type": "application/json" }),
+  //     body: JSON.stringify(this.form)
+  //   }).then(resp => {
+  //     console.log(resp);
+  //     if (!resp.ok) {
+  //       if (resp.status >= 400 || resp.status < 500) {
+  //         return resp.json().then(data => {
+  //           const err = { errorMessage: data.message };
+  //           throw err;
+  //         });
+  //       }
+  //       const err = { errorMessage: "Blah" };
+  //       throw err;
+  //     }
+  //     return resp.json();
+  //   });
+  // },
+
   methods: {
     verified() {
       console.log("verified");
-      for (i = 0; i < resp.length; i++) {
-        this.bool = resp.profile[i].username;
-      }
     },
     notVerified() {
       console.log("notVerified");
+    },
+    bool() {
       for (i = 0; i < resp.length; i++) {
-        this.bool = resp.profile[i].password;
+        if (
+          document.querySelector("#username").value ==
+            resp.profile[i].username &&
+          document.querySelector("#password").value == resp.profile[i].password
+        ) {
+          return verified();
+        } else {
+          return notVerified();
+        }
       }
     }
   }
