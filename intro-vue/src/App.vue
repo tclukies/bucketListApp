@@ -1,20 +1,44 @@
 <template>
-  <div id="app">
+  <div id='app'>
     <router-view/>
 
   </div>
 </template>
 
 <script>
+const API_URL = "https://travel-bug-backend.herokuapp.com/profiles";
 
 export default {
-
+  name: "Register",
+  data() {
+    return {
+      // registerURL: "https://travel-bug-backend.herokuapp.com/profiles",
+      // form: {
+      //   username: "",
+      //   password: ""
+      // },
+      show: true
+      // users: [],
+    };
+  },
+  // mounted() {
+  //   fetch(this.registerURL, {
+  //     method: "get",
+  //     mode: "cors",
+  //     credentials: "same-origin",
+  //     headers: new Headers({ "Content-Type": "application/json" })
+  //   }).then(resp => {
+  //     return resp.json().then(resp => {
+  //       console.log(resp);
+  //     });
+  //   });
+  // }
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

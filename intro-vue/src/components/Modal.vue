@@ -9,11 +9,11 @@
           <div class='modal-header'>
             <slot name='login'>
       <div v-if='logseen' id='signin'>
-        <form @submit.prevent='searchForCredentials()'>
+        <form action='/main'>
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
-            <router-link to='/main' tag='button'>Sign In</router-link>
+            <input @click="bool" type='submit' value='Sign In'>
             <div>
             <label for='login'>New to Travel Bug?</label>
             </div>
@@ -65,8 +65,69 @@ export default {
     return {
       seen: false,
       logseen: true,
-      name: "modal"
+      name: "modal",
+      // bool: true,
+      signinUrl: "https://travel-bug-backend.herokuapp.com/profiles",
+      form: {
+        username: "",
+        password: ""
+      }
     };
+  },
+  mounted() {
+    fetch(this.signinUrl, {
+      method: "get",
+      mode: "cors",
+      credentials: "same-origin",
+      headers: new Headers({ "Content-Type": "application/json" })
+    }).then(resp => {
+      return resp.json().then(resp => {
+        console.log(resp);
+      });
+    });
+  },
+  // onSubmit(evt) {
+  //   evt.preventDefault();
+  //   return fetch(this.signinURL, {
+  //     method: "post",
+  //     headers: new Headers({ "Content-Type": "application/json" }),
+  //     body: JSON.stringify(this.form)
+  //   }).then(resp => {
+  //     console.log(resp);
+  //     if (!resp.ok) {
+  //       if (resp.status >= 400 || resp.status < 500) {
+  //         return resp.json().then(data => {
+  //           const err = { errorMessage: data.message };
+  //           throw err;
+  //         });
+  //       }
+  //       const err = { errorMessage: "Blah" };
+  //       throw err;
+  //     }
+  //     return resp.json();
+  //   });
+  // },
+
+  methods: {
+    verified() {
+      console.log("verified");
+    },
+    notVerified() {
+      console.log("notVerified");
+    },
+    bool() {
+      for (i = 0; i < resp.length; i++) {
+        if (
+          document.querySelector("#username").value ==
+            resp.profile[i].username &&
+          document.querySelector("#password").value == resp.profile[i].password
+        ) {
+          return verified();
+        } else {
+          return notVerified();
+        }
+      }
+    }
   }
 };
 </script>
@@ -93,5 +154,4 @@ export default {
   display: flex;
   flex-wrap: column;
 }
-
 </style>
