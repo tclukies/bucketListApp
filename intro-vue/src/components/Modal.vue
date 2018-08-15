@@ -12,7 +12,7 @@
         <form>
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
-            <input placeholder='Password' type='text' name='password' id='password' value=''>
+            <input placeholder='Password' type='password' name='password' id='password' value=''>
             <input @click.prevent="bool" type='submit' value='Sign In'>
             <div>
             <label for='login'>New to Travel Bug?</label>
@@ -88,7 +88,6 @@ export default {
         console.log(this.profileData.profile);
       });
   },
-
   // onSubmit(evt) {
   //   evt.preventDefault();
   //   return fetch(this.signinURL, {
@@ -113,7 +112,7 @@ export default {
 
   methods: {
     verified() {
-      console.log("verified");
+      // this.router.go('/main')
     },
     notVerified() {
       console.log("notVerified");
@@ -122,7 +121,6 @@ export default {
       console.log("bool is called");
       // console.log(document.querySelector("#username").value);
       // console.log(this.profileData.profile[0].username);
-      
       
       for (let i = 0; i < this.profileData.profile.length; i++) {
         console.log(this.profileData.profile.length)
