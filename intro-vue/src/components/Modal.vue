@@ -13,8 +13,7 @@
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='text' name='password' id='password' value=''>
-            <!-- <router-link to='/main' @click='bool ? verified() : notVerified()' tag='button'>Sign In</router-link> -->
-            <input type='submit' value='Sign In'>
+            <input @click="bool ? verified() : notVerified()" type='submit' value='Sign In'>
             <div>
             <label for='login'>New to Travel Bug?</label>
             </div>
@@ -67,19 +66,38 @@ export default {
       seen: false,
       logseen: true,
       name: "modal",
-      bool: true
+      bool: true,
+      // name: "Register",
+      registerURL: "https://travel-bug-backend.herokuapp.com/profiles",
+      form: {
+        username: "",
+        password: ""
+      }
     };
   },
-  methods: {
+    mounted() {
+    fetch(this.registerURL, {
+      method: "get",
+      mode: "cors",
+      credentials: "same-origin",
+      headers: new Headers({ "Content-Type": "application/json" })
+    }).then(resp => {
+      return resp.json().then(resp => {
+        console.log(resp);
+      });
+    });
+  },
+    methods: {
     verified() {
       console.log("verified");
+      console.log(resp);
       this.bool = !this.bool;
     },
     notVerified() {
       console.log("notVerified");
       this.bool = !this.bool;
     }
-  }
+  },
 };
 </script>
  
