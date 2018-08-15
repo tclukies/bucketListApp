@@ -3,8 +3,21 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-// import Header from './components/Header';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 import Footer from './components/Footer';
+import * as VueGoogleMaps from 'vue2-google-maps'
+ 
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyASCy4vaXQzI49aGBeT6E1if9kGl9Dp2gA',
+    libraries: 'places'
+ 
+  },
+ 
+})
+
+Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false;
 
