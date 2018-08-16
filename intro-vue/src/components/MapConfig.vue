@@ -44,7 +44,7 @@ export default {
       places: [],
       currentPlace: null,
       profilePostsUrl:
-        "https://travel-bug-backend.herokuapp.com/posts/profile/" 
+        "https://travel-bug-backend.herokuapp.com/posts/profile/1" 
     };
   },
   mounted() {
