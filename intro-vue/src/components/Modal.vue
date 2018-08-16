@@ -69,7 +69,6 @@ export default {
       seen: false,
       logseen: true,
       name: "modal",
-      // bool: true,
       signinUrl: "https://travel-bug-backend.herokuapp.com/profiles",
       form: {
         username: "",
