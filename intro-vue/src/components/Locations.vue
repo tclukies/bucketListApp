@@ -3,6 +3,7 @@
     <ul>
         <li v-for="post in locationData" :key="post.id">
             <h3 class="destination-h3">Country: {{ post.country_name }}</h3>
+            <h3 class="destination-h3">Date: {{ post.goal_date }}</h3>
             <h4 class="destination-activities">Activity: {{ post.activities }}</h4>
         </li>
     </ul>
