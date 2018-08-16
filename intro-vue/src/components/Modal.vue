@@ -91,32 +91,11 @@ export default {
         console.log(this.profileData.profile);
       });
   },
-  // onSubmit(evt) {
-  //   evt.preventDefault();
-  //   return fetch(this.signinURL, {
-  //     method: "post",
-  //     headers: new Headers({ "Content-Type": "application/json" }),
-  //     body: JSON.stringify(this.form)
-  //   }).then(resp => {
-  //     console.log(resp);
-  //     if (!resp.ok) {
-  //       if (resp.status >= 400 || resp.status < 500) {
-  //         return resp.json().then(data => {
-  //           const err = { errorMessage: data.message };
-  //           throw err;
-  //         });
-  //       }
-  //       const err = { errorMessage: "Blah" };
-  //       throw err;
-  //     }
-  //     return resp.json();
-  //   });
-  // },
 
   methods: {
     verified() {
-      console.log(verified)
-      // this.router.go("/main");
+      console.log('verified')
+      this.$router.push('main');
     },
     notVerified() {
       console.log("notVerified");
