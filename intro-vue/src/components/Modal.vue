@@ -12,12 +12,13 @@
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='password' name='password' id='password' value=''>
-            <input @click.prevent='bool' type='submit' value='Sign In'>
+            <input @click.prevent='bool' type='submit' value='Sign In' id='signButton'>
             <div>
             <label for='login'>New to Travel Bug?</label>
             </div>
             <div>
-            <b-button class='danger' v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</b-button>
+            <!-- <b-button class='danger' v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</b-button> -->
+            <button v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</button>
             </div>
             <div id="alertMessage"><p></p></div>
         </form>
@@ -117,6 +118,13 @@ export default {
 body {
   background-color: rgba(247, 178, 49, 0.877);
 }
+
+button {
+  background-color: orange;
+  color:black;
+  border: black solid 2px;
+   border-radius: 5px;
+}
 .modal-container {
   display: flex;
   justify-content: center;
@@ -125,5 +133,12 @@ body {
 #signin {
   display: flex;
   flex-wrap: column;
+}
+
+#signButton {
+   background-color: orange;
+  color:black;
+  border: black solid 2px;
+  border-radius: 5px;
 }
 </style>
