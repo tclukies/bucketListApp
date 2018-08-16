@@ -15,6 +15,7 @@
             <textarea  v-model='form.visited' placeholder='True or False' type='text' name='visited' id='visited' value=''></textarea>
           </div>
             <button type='submit' name='button' onClick="setTimeout('history.go(0);',1000)">Add Now!</button>
+
             
         </form>
     </div>
@@ -39,7 +40,6 @@ export default {
     },
     methods: {
         onSubmit(evt) {
-            console.log(this.$route.query.user);
             this.form.profile_id = this.$route.query.user;
             evt.preventDefault();
             return fetch(this.postsURL, {
