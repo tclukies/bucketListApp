@@ -37,19 +37,6 @@ export default {
             }
         };
     },
-    // export default {
-
-    //   data() {
-    //     return {
-    //       registerURL: 'https://gvideos-api.herokuapp.com/auth/register',
-    //       form: {
-    //         username: '',
-    //         password: '',
-    //       },
-    //       show: true,
-    //       // users: [],
-    //     };
-    //   },
     methods: {
         onSubmit(evt) {
             console.log(this.$route.query.user);
