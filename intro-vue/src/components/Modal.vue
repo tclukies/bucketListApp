@@ -88,23 +88,23 @@ export default {
       });
   },
 
-    methods: {
-        verified(userid) {
-            console.log("userid" + userid);
-            console.log("verified");
-            this.$router.push({ path: "main", query: { user: userid } });
-        },
-        notVerified() {
-            console.log("notVerified");
-        },
-        bool() {
-            console.log("bool is called");
-            // console.log(document.querySelector("#username").value);
-            // console.log(this.profileData.profile[0].username);
+  methods: {
+    verified(userid) {
+      console.log("userid" + userid);
+      console.log("verified");
+      this.$router.push({ path: "main", query: { user: userid } });
+    },
+    notVerified() {
+      console.log("notVerified");
+    },
+    bool() {
+      console.log("bool is called");
+      // console.log(document.querySelector("#username").value);
+      // console.log(this.profileData.profile[0].username);
 
-            for (let i = 0; i < this.profileData.profile.length; i++) {
-                console.log(this.profileData.profile.length);
-                console.log(this.profileData.profile[i].username);
+      for (let i = 0; i < this.profileData.profile.length; i++) {
+        console.log(this.profileData.profile.length);
+        console.log(this.profileData.profile[i].username);
 
         if (
           document.querySelector("#username").value ===
@@ -116,30 +116,32 @@ export default {
         } else {
           this.notVerified();
         }
+      }
     }
+  }
 };
 </script>
  
 <style scope>
 .modal-backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .modal {
-    background: #ffffff;
-    box-shadow: 2px 2px 20px 1px;
-    overflow-x: auto;
-    display: flex;
-    flex-direction: column;
+  background: #ffffff;
+  box-shadow: 2px 2px 20px 1px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
 }
 #signin {
-    display: flex;
-    flex-wrap: column;
+  display: flex;
+  flex-wrap: column;
 }
 </style>
