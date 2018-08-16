@@ -1,6 +1,6 @@
 <template>
 <div id='country'>
-     <form @submit='onSubmit'>
+     <form @submit='onSubmit' class="country-form">
          <label for='addToList'>Add to Your Bucket List</label>
          <div>
             <input  v-model='form.country_name' placeholder='Country Name' type='text' name='country_name' id='country_name' value=''>
@@ -68,4 +68,7 @@ export default {
 </script>
  
 <style>
+.country-form{
+    margin-top: 120px;
+}
 </style>
