@@ -14,7 +14,7 @@
           <div>
             <textarea  v-model='form.visited' placeholder='True or False' type='text' name='visited' id='visited' value=''></textarea>
           </div>
-            <button type='submit' name='button'>Add Now!</button>
+            <button type='submit' name='button' class="country-form-button">Add Now!</button>
             
         </form>
     </div>
@@ -70,5 +70,17 @@ export default {
 <style>
 .country-form{
     margin-top: 120px;
+}
+
+.country-form-button{
+    color: black;
+    background-color: orange;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.country-form-button:hover{
+    color: orange;
+    background-color: black;
 }
 </style>

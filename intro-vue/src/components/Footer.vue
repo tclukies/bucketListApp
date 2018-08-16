@@ -20,14 +20,17 @@ export default {
  
 <style>
   .anchor{
-    color: black;
     text-decoration: none;
-    border: 1px solid grey;
+    color: black;
+    background-color: orange;
+    border: 2px solid black;
     border-radius: 5px;
-    background-color: silver;
+    padding-left:3px;;
+    padding-right: 3px;
   }
 
   .anchor:hover{
-    background-color: orange;
+    color: orange;
+    background-color: black;
   }
 </style>
