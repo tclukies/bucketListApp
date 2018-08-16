@@ -1,7 +1,13 @@
 <template>
   <div>
     <div>
-      <h2>Search the map for locations you want to visit!</h2>
+      <h2 class="map-h2">Search the map for locations you want to visit!</h2>
+      <label>
+        <!-- <gmap-autocomplete
+          @place_changed="setPlace">
+        </gmap-autocomplete> -->
+        <!-- <button @click="addMarker">Add</button> -->
+      </label>
       <br/>
 
     </div>
@@ -11,6 +17,7 @@
       :zoom="2"
       style="width:800px;  height: 500px;"
       @click = "handleClick"
+      class="gmap-maps"
     >
       <gmap-marker
         :key="index"
@@ -83,3 +90,11 @@ export default {
     }
 };
 </script>
+<style>
+.map-h2{
+    margin-left: -150px;
+}
+.gmap-maps{
+    margin-bottom: 20px;
+}
+</style>

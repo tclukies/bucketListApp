@@ -51,7 +51,9 @@ export default {
 #main {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  background: cover;
+  /* height: 200vh; */
   justify-content: space-between;
+  background-color: rgba(247, 178, 49, 0.877);
 }
 </style>

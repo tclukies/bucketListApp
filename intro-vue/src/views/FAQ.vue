@@ -32,6 +32,10 @@ export default {
 </script>
 
 <style>
+    body{
+      background: cover;
+    }
+
   .faq-question{
     color: red;
   }
