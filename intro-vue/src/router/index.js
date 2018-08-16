@@ -38,4 +38,7 @@ export default new Router({
       component: ContactUs,
     },
   ],
-});
+})
+export const routes = [
+  {path:'/main', component:main, meta:{conditionalRoute:true}}
+];
