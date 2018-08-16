@@ -37,26 +37,30 @@ export default {
       markers: [{position: {lat: 28.3949, lng: 84.124}},{position: {lat: -38.4161, lng: -63.6167}},{position: {lat: -35.6751, lng: -71.543}},{position: {lat: 60.472, lng: 8.46895}},{position: {lat: -40.9006, lng: 174.886}}],
       places: [],
       currentPlace: null,
-      profilePostsUrl: "https://travel-bug-backend.herokuapp.com/posts/profile/" + profile.id,
+      profilePostsUrl: "https://travel-bug-backend.herokuapp.com/posts/profile/1",
     };
   },
-
   mounted() {
     this.geolocate();
-    this.getData()
-  },
+    // this.getData()
+  }, {
+   fetch(this.profilePostsUrl, {
+      method: "get",
+      mode: "cors",
+      credentials: "same-origin",
+      headers: new Headers({ "Content-Type": "application/json" })
+    })
+      .then(resp => resp.json())
+      .then(resp => {
+        this.profileData = resp;
+        console.log(this.profileData.profile);
+      })
+  }
 
   methods: {
-    // getData(){
-    //   fetch('https://travel-bug-backend.herokuapp.com/posts')
-    //   .then(response => (response.json()))
-    //   .then(myData => this.markers = myData.posts)
-    //   console.log("Douche", this.markers)
-    // },
     handleClick(event) {
       console.log('handleClick', event.latLng.lng(), event.latLng.lat())
     },
-    // receives a place object via the autocomplete component
     setPlace(place) {
       this.currentPlace = place;
     },
