@@ -9,6 +9,9 @@
     <AddCountry />
     </div>
     <div>
+    <Locations />
+    </div>
+    <div>
     <MapConfig />
     </div>
     </div>
@@ -20,6 +23,7 @@
 <script>
 import Header from "@/components/Header";
 import AddCountry from "@/components/AddCountry";
+import Locations from "@/components/Locations";
 import MapConfig from "@/components/MapConfig";
 import Footer from "@/components/Footer";
 export default {
@@ -27,6 +31,7 @@ export default {
   components: {
     Header,
     AddCountry,
+    Locations,
     MapConfig,
     Footer
   }
