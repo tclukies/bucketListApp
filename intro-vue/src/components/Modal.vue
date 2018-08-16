@@ -92,17 +92,15 @@ export default {
   },
 
   methods: {
-    verified() {
+    verified(userid) {
       console.log('verified')
-      this.$router.push('main');
+      this.$router.push({ path: "main", query: { user: userid } });
     },
     notVerified() {
       console.log("notVerified");
     },
     bool() {
       console.log("bool is called");
-      // console.log(document.querySelector("#username").value);
-      // console.log(this.profileData.profile[0].username);
 
       for (let i = 0; i < this.profileData.profile.length; i++) {
         console.log(this.profileData.profile.length);
@@ -114,7 +112,7 @@ export default {
           document.querySelector("#password").value ===
             this.profileData.profile[i].password
         ) {
-          this.verified();
+          this.verified(this.profileData.profile[i].id);
         } else {
           this.notVerified();
         }
