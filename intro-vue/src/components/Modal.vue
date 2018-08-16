@@ -13,7 +13,7 @@
           <h3>Come Explore</h3>
             <input placeholder='Username' type='text' name='username' id='username' value=''>
             <input placeholder='Password' type='password' name='password' id='password' value=''>
-            <input @click.prevent="bool" type='submit' value='Sign In'>
+            <input @click.prevent='bool' type='submit' value='Sign In'>
             <div>
             <label for='login'>New to Travel Bug?</label>
             </div>
@@ -59,6 +59,9 @@
 </template>
 
 <script>
+
+
+
 export default {
   name: "Modal",
   data() {
@@ -66,7 +69,6 @@ export default {
       seen: false,
       logseen: true,
       name: "modal",
-      // bool: true,
       signinUrl: "https://travel-bug-backend.herokuapp.com/profiles",
       form: {
         username: "",
@@ -88,31 +90,11 @@ export default {
         console.log(this.profileData.profile);
       });
   },
-  // onSubmit(evt) {
-  //   evt.preventDefault();
-  //   return fetch(this.signinURL, {
-  //     method: "post",
-  //     headers: new Headers({ "Content-Type": "application/json" }),
-  //     body: JSON.stringify(this.form)
-  //   }).then(resp => {
-  //     console.log(resp);
-  //     if (!resp.ok) {
-  //       if (resp.status >= 400 || resp.status < 500) {
-  //         return resp.json().then(data => {
-  //           const err = { errorMessage: data.message };
-  //           throw err;
-  //         });
-  //       }
-  //       const err = { errorMessage: "Blah" };
-  //       throw err;
-  //     }
-  //     return resp.json();
-  //   });
-  // },
 
   methods: {
     verified() {
-      // this.router.go('/main')
+      console.log('verified')
+      this.$router.push('main');
     },
     notVerified() {
       console.log("notVerified");
@@ -121,11 +103,11 @@ export default {
       console.log("bool is called");
       // console.log(document.querySelector("#username").value);
       // console.log(this.profileData.profile[0].username);
-      
+
       for (let i = 0; i < this.profileData.profile.length; i++) {
-        console.log(this.profileData.profile.length)
-        console.log(this.profileData.profile[i].username)
-        
+        console.log(this.profileData.profile.length);
+        console.log(this.profileData.profile[i].username);
+
         if (
           document.querySelector("#username").value ===
             this.profileData.profile[i].username &&
