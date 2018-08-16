@@ -60,33 +60,33 @@
 
 <script>
 export default {
-    name: "Modal",
-    data() {
-        return {
-            seen: false,
-            logseen: true,
-            name: "modal",
-            signinUrl: "https://travel-bug-backend.herokuapp.com/profiles",
-            form: {
-                username: "",
-                password: ""
-            },
-            profileData: null
-        };
-    },
-    mounted() {
-        fetch(this.signinUrl, {
-            method: "get",
-            mode: "cors",
-            credentials: "same-origin",
-            headers: new Headers({ "Content-Type": "application/json" })
-        })
-            .then(resp => resp.json())
-            .then(resp => {
-                this.profileData = resp;
-                console.log(this.profileData.profile);
-            });
-    },
+  name: "Modal",
+  data() {
+    return {
+      seen: false,
+      logseen: true,
+      name: "modal",
+      signinUrl: "https://travel-bug-backend.herokuapp.com/profiles",
+      form: {
+        username: "",
+        password: ""
+      },
+      profileData: null
+    };
+  },
+  mounted() {
+    fetch(this.signinUrl, {
+      method: "get",
+      mode: "cors",
+      credentials: "same-origin",
+      headers: new Headers({ "Content-Type": "application/json" })
+    })
+      .then(resp => resp.json())
+      .then(resp => {
+        this.profileData = resp;
+        console.log(this.profileData.profile);
+      });
+  },
 
     methods: {
         verified(userid) {
@@ -106,17 +106,15 @@ export default {
                 console.log(this.profileData.profile.length);
                 console.log(this.profileData.profile[i].username);
 
-                if (
-                    document.querySelector("#username").value ===
-                        this.profileData.profile[i].username &&
-                    document.querySelector("#password").value ===
-                        this.profileData.profile[i].password
-                ) {
-                    this.verified(this.profileData.profile[i].id);
-                } else {
-                    this.notVerified();
-                }
-            }
+        if (
+          document.querySelector("#username").value ===
+            this.profileData.profile[i].username &&
+          document.querySelector("#password").value ===
+            this.profileData.profile[i].password
+        ) {
+          this.verified(this.profileData.profile[i].id);
+        } else {
+          this.notVerified();
         }
     }
 };
