@@ -7,24 +7,41 @@
         <section class='about-us-1'>
           <div class='about-div-1'>
             <h2 class='about-h2'>Thomas Clukies</h2>
-            <img src='https://i.pinimg.com/originals/6d/b4/2b/6db42b2e91911a1c9549fdc2f0c710be.gif' class='about-img'>
+            <img src='https://media.licdn.com/dms/image/C4E03AQGESCp6uZoaFQ/profile-displayphoto-shrink_800_800/0?e=1539820800&v=beta&t=zyZGBq9E3aH8H5SkhaAEmlURPlongDD3Jqk8SGLjAV8' class='about-img'>
+            <p>Phone: (303)406-3835 </p>
+            <p>Email: thomas.clukies@gmail.com</p>
+            <a href = 'https://github.com/tclukies'>GitHub</a>
+            <a href = 'https://www.linkedin.com/in/thomas-clukies/'>LinkedIn</a>
             <p class='about-p'>Thomas thomas ThOmAs</p>
+
           </div>
           <div class='about-div-2'>
             <h2 class='about-h2'>R.J. Kirkhope</h2>
-            <img src='https://media1.tenor.com/images/e33213fd8faef93769b36b86ef2b58b6/tenor.gif?itemid=5294604' class='about-img'>
+            <img src='https://media.licdn.com/dms/image/C4E03AQG4ZM2q1Ite_Q/profile-displayphoto-shrink_800_800/0?e=1539820800&v=beta&t=jmVpGWBXklqJFnu7Eg7QGPwi12GpFUzbxk79KJWkYG8' class='about-img'>
+            <p>Phone: (303) 717-3002 </p>
+            <p>Email: rjkirkhope@gmail.com</p>
+            <a href = 'https://github.com/rjkirkhope'>GitHub</a>
+            <a href = 'https://www.linkedin.com/in/robert-kirkhope/'>LinkedIn</a>
             <p class='about-p'>R.J. r.j. R.j.</p>
           </div>
         </section>
         <section class='about-us-2'>
           <div class='about-div-3'>
             <h2 class='about-h2'>Ryan McCrory</h2>
-            <img src='http://digitalspyuk.cdnds.net/16/34/480x360/gallery-1471962283-giphy-5.gif' class='about-img'>
+            <img src='https://media.licdn.com/dms/image/C5603AQEydsW4sLA8bg/profile-displayphoto-shrink_800_800/0?e=1539820800&v=beta&t=Bej1VdnGOCKVUYp8zuv5NL4Kzaxp740nPz9LbnZV0qI' class='about-img'>
+            <p>Phone: (303) 709-9989</p>
+            <p>Email: ryanmccrory83@gmail.com</p>
+            <a href = 'https://github.com/ryanmccrory83/'>GitHub</a>
+            <a href = 'https://www.linkedin.com/in/ryan-mccrory83/'>LinkedIn</a>
             <p class='about-p'>Ryan ryan RyAn</p>
           </div>
           <div class='about-div-4'>
             <h2 class='about-h2'>Natalie Todd</h2>
-            <img src='https://78.media.tumblr.com/tumblr_lw1xg8uCIv1qd8t4mo1_500.gif' class='about-img'>
+            <img src='https://media.licdn.com/dms/image/C5603AQF4UW_luFwmXQ/profile-displayphoto-shrink_800_800/0?e=1539820800&v=beta&t=8HZh5_TybesLzGGGKYdTAN7SFETpW5pDpM6CpCVrf7g' class='about-img'>
+            <p>Phone: (907) 317-7907 </p>
+            <p>Email: natalie.todd15@gmail.com</p>
+            <a href = 'https://github.com/natalie-todd'>GitHub</a>
+            <a href = 'https://www.linkedin.com/in/natalie-todd/'>LinkedIn</a>
             <p class='about-p'>Natalie natalie NaTaLiE</p>
           </div>        
         </section>
@@ -40,66 +57,65 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 export default {
-  name: "About",
-  components: {
-    Header,
-    Footer
-  }
+    name: "About",
+    components: {
+        Header,
+        Footer
+    }
 };
 </script>
 
 <style scoped>
-  .about{
+.about {
     background: no-repeat;
     background-size: 100vw 100vh;
-    background-image: url('http://goldwallpapers.com/uploads/posts/beautiful-sunrise-wallpaper/beautiful_sunrise_wallpaper_008.jpg');
-  }
+    background-image: url("http://goldwallpapers.com/uploads/posts/beautiful-sunrise-wallpaper/beautiful_sunrise_wallpaper_008.jpg");
+}
 
-    .about-h1{
-      color: white;
-    }
-    
-  .about-main{
-    display:grid;
+.about-h1 {
+    color: white;
+}
+
+.about-main {
+    display: grid;
     flex-flow: row wrap;
-  }
+}
 
-  .about-us-1{
-    display:flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-
-  }
-  .about-us-2{
+.about-us-1 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-  }
-  .about-div-1{
+}
+.about-us-2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.about-div-1 {
     margin-left: 20px;
-  }
+}
 
-  .about-div-2{
+.about-div-2 {
     margin-left: -20px;
-  }
+}
 
-  .about-div-3{
+.about-div-3 {
     margin-left: 20px;
-  }
+}
 
-  .about-div-4{
+.about-div-4 {
     margin-left: -20px;
-  }
-  .about-h2{
+}
+.about-h2 {
     color: red;
-  }
+}
 
-  .about-img{
+.about-img {
     height: 20vh;
-    width: 20vw;
-  }
+    border-radius: 50%;
+}
 
-  .about-p{
+.about-p {
     color: white;
-  }
+}
 </style>
