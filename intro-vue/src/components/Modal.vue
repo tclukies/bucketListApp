@@ -59,91 +59,89 @@
 </template>
 
 <script>
-
-
-
 export default {
-  name: "Modal",
-  data() {
-    return {
-      seen: false,
-      logseen: true,
-      name: "modal",
-      signinUrl: "https://travel-bug-backend.herokuapp.com/profiles",
-      form: {
-        username: "",
-        password: ""
-      },
-      profileData: null
-    };
-  },
-  mounted() {
-    fetch(this.signinUrl, {
-      method: "get",
-      mode: "cors",
-      credentials: "same-origin",
-      headers: new Headers({ "Content-Type": "application/json" })
-    })
-      .then(resp => resp.json())
-      .then(resp => {
-        this.profileData = resp;
-        console.log(this.profileData.profile);
-      });
-  },
-
-  methods: {
-    verified() {
-      console.log('verified')
-      this.$router.push('main');
+    name: "Modal",
+    data() {
+        return {
+            seen: false,
+            logseen: true,
+            name: "modal",
+            signinUrl: "https://travel-bug-backend.herokuapp.com/profiles",
+            form: {
+                username: "",
+                password: ""
+            },
+            profileData: null
+        };
     },
-    notVerified() {
-      console.log("notVerified");
+    mounted() {
+        fetch(this.signinUrl, {
+            method: "get",
+            mode: "cors",
+            credentials: "same-origin",
+            headers: new Headers({ "Content-Type": "application/json" })
+        })
+            .then(resp => resp.json())
+            .then(resp => {
+                this.profileData = resp;
+                console.log(this.profileData.profile);
+            });
     },
-    bool() {
-      console.log("bool is called");
-      // console.log(document.querySelector("#username").value);
-      // console.log(this.profileData.profile[0].username);
 
-      for (let i = 0; i < this.profileData.profile.length; i++) {
-        console.log(this.profileData.profile.length);
-        console.log(this.profileData.profile[i].username);
+    methods: {
+        verified(userid) {
+            console.log("userid" + userid);
+            console.log("verified");
+            this.$router.push({ path: "main", query: { user: userid } });
+        },
+        notVerified() {
+            console.log("notVerified");
+        },
+        bool() {
+            console.log("bool is called");
+            // console.log(document.querySelector("#username").value);
+            // console.log(this.profileData.profile[0].username);
 
-        if (
-          document.querySelector("#username").value ===
-            this.profileData.profile[i].username &&
-          document.querySelector("#password").value ===
-            this.profileData.profile[i].password
-        ) {
-          this.verified();
-        } else {
-          this.notVerified();
+            for (let i = 0; i < this.profileData.profile.length; i++) {
+                console.log(this.profileData.profile.length);
+                console.log(this.profileData.profile[i].username);
+
+                if (
+                    document.querySelector("#username").value ===
+                        this.profileData.profile[i].username &&
+                    document.querySelector("#password").value ===
+                        this.profileData.profile[i].password
+                ) {
+                    this.verified(this.profileData.profile[i].id);
+                } else {
+                    this.notVerified();
+                }
+            }
         }
-      }
     }
-  }
 };
 </script>
  
 <style scope>
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .modal {
-  background: #ffffff;
-  box-shadow: 2px 2px 20px 1px;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px 1px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
 }
 #signin {
-  display: flex;
-  flex-wrap: column;
+    display: flex;
+    flex-wrap: column;
 }
 </style>
