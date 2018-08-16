@@ -18,6 +18,8 @@ Vue.use(VueGoogleMaps, {
 
 Vue.use(VueAxios, axios)
 
+Vue.use(require('vue-moment'));
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
