@@ -1,7 +1,7 @@
 <template>
   <div class="destination">
     <ul>
-        <li v-for="post in posts" :key="post">
+        <li v-for="post in locationData" :key="post.id">
             <h3 class="destination-h3">Country: {{ post.country_name }}</h3>
             <h4 class="destination-activities">Activity: {{ post.activities }}</h4>
         </li>
@@ -23,23 +23,14 @@ export default {
     fetch(this.locationUrl, {
       method: "get",
       mode: "cors",
-      //   credentials: "same-origin",
       headers: new Headers({ "Content-Type": "application/json" })
     })
       .then(resp => resp.json())
       .then(resp => {
-        this.profileData = resp;
+        this.locationData = resp.posts;
         console.log(resp);
-        // console.log(this.locationData.profile);
       });
-  },
-//   methods: {
-//       locationList(){
-//           for(let i = 0; i < this.profileData.posts[i].length; i++){
-
-//           }
-//       }
-//   }
+  }
 };
 </script>
  
