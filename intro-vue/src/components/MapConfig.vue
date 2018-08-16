@@ -15,7 +15,7 @@
     <gmap-map
       :center="center"
       :zoom="2"
-      style="width:100%;  height: 400px;"
+      style="width:800px;  height: 500px;"
       @click = "handleClick"
     >
       <gmap-marker
@@ -34,13 +34,7 @@ export default {
   data() {
     return {
       center: { lat: 45.508, lng: -73.587 },
-      markers: [
-        { position: { lat: 28.3949, lng: 84.124 } },
-        { position: { lat: -38.4161, lng: -63.6167 } },
-        { position: { lat: -35.6751, lng: -71.543 } },
-        { position: { lat: 60.472, lng: 8.46895 } },
-        { position: { lat: -40.9006, lng: 174.886 } }
-      ],
+      markers: [],
       places: [],
       currentPlace: null,
       profilePostsUrl:
