@@ -18,7 +18,7 @@
             <label for='login'>New to Travel Bug?</label>
             </div>
             <div>
-            <button v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</button>
+            <b-button class='danger' v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</b-button>
             </div>
             <div id="alertMessage"><p></p></div>
         </form>
@@ -115,16 +115,6 @@ export default {
 </script>
  
 <style scope>
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .modal {
     background: #ffffff;
     box-shadow: 2px 2px 20px 1px;
