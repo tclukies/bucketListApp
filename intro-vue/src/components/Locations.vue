@@ -40,11 +40,10 @@ export default {
 <style>
 .destination {
   padding: 8px;
-  /* border: 1px solid red; */
 }
 
 .destination-ul{
-  background-color: orange;
+  background-color: #86BBD8;
   display: flex;
   flex-flow: column wrap;
   list-style-type: none;
@@ -71,7 +70,7 @@ export default {
   border: 2px solid black;
   border-radius: 5px;
   width: 150px;
-  background-color: rgba(247, 178, 49, 0.877);
+    background-color: #C9F0FF;
   color: black;
   text-shadow: 2px 2px silver;
   

@@ -47,75 +47,71 @@
         </section>
       </main>
     <Footer />
-    
-
     </div>
-    
 </template>
 
 <script>
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 export default {
-    name: "About",
-    components: {
-        Header,
-        Footer
-    }
+  name: "About",
+  components: {
+    Header,
+    Footer
+  }
 };
 </script>
 
 <style scoped>
 .about {
-    background: no-repeat;
-    background-size: 100vw 100vh;
-    background-image: url("http://goldwallpapers.com/uploads/posts/beautiful-sunrise-wallpaper/beautiful_sunrise_wallpaper_008.jpg");
+  background: no-repeat;
+  background-size: 100vw 100vh;
 }
 
 .about-h1 {
-    color: white;
+  color: white;
 }
 
 .about-main {
-    display: grid;
-    flex-flow: row wrap;
+  display: grid;
+  flex-flow: row wrap;
 }
 
 .about-us-1 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
 .about-us-2 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
 .about-div-1 {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .about-div-2 {
-    margin-left: -20px;
+  margin-left: -20px;
 }
 
 .about-div-3 {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .about-div-4 {
-    margin-left: -20px;
+  margin-left: -20px;
 }
 .about-h2 {
-    color: red;
+  color: #302B27;
 }
 
 .about-img {
-    height: 20vh;
-    border-radius: 50%;
+  height: 20vh;
+  border-radius: 50%;
 }
 
 .about-p {
-    color: white;
+  color: white;
 }
 </style>

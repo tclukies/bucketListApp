@@ -39,21 +39,31 @@ export default {
 </script>
 
 <style>
+.travel-bug {
+  background-color: #86BBD8;
+}
 .horizontal {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: #C9F0FF;
 }
 .header {
   display: flex;
   justify-content: flex-end;
+  background-color: #C9F0FF;
+}
+.destination {
+  background-color: #C9F0FF;
+}
+.front {
+  background-color: #C9F0FF;
 }
 #main {
   display: flex;
   flex-direction: column;
   background: cover;
-  /* height: 200vh; */
   justify-content: space-between;
-  background-color: rgba(247, 178, 49, 0.877);
+  background-color: #C9F0FF;
 }
 </style>

@@ -12,27 +12,9 @@ export default {
   name: "Register",
   data() {
     return {
-      // registerURL: "https://travel-bug-backend.herokuapp.com/profiles",
-      // form: {
-      //   username: "",
-      //   password: ""
-      // },
       show: true
-      // users: [],
     };
   },
-  // mounted() {
-  //   fetch(this.registerURL, {
-  //     method: "get",
-  //     mode: "cors",
-  //     credentials: "same-origin",
-  //     headers: new Headers({ "Content-Type": "application/json" })
-  //   }).then(resp => {
-  //     return resp.json().then(resp => {
-  //       console.log(resp);
-  //     });
-  //   });
-  // }
 };
 </script>
 
@@ -44,6 +26,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: rgba(247, 178, 49, 0.877);
+  background-color: #C9F0FF;
 }
 </style>
