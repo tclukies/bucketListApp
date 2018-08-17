@@ -116,7 +116,15 @@ export default {
 <style scope>
 
 body {
-  background-color: rgba(247, 178, 49, 0.877);
+  background-color: #86BBD8;
+}
+
+h1 {
+  background-color: #86BBD8;
+}
+
+h3 {
+  color: #C9F0FF
 }
 
 button {
@@ -125,14 +133,25 @@ button {
   border: black solid 2px;
    border-radius: 5px;
 }
+
+label {
+ color: #C9F0FF
+}
+.content {
+   background-color: #86BBD8;
+}
 .modal-container {
   display: flex;
   justify-content: center;
-    background-color:orange;
+    background-color: #302B27;
 }
 #signin {
   display: flex;
   flex-wrap: column;
+}
+
+#first {
+  background-color: #86BBD8;
 }
 
 #signButton {
