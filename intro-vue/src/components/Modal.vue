@@ -160,4 +160,8 @@ label {
   border: #C9F0FF solid 2px;
   border-radius: 5px;
 }
+
+#alertMessage {
+  color: #C9F0FF;
+}
 </style>

@@ -47,6 +47,10 @@ export default {
 .header {
   display: flex;
   justify-content: flex-end;
+  background-color: #C9F0FF;
+}
+.destination {
+  background-color: #C9F0FF;
 }
 #main {
   display: flex;
