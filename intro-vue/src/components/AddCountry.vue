@@ -3,16 +3,16 @@
      <form @submit='onSubmit' class="country-form">
          <label for='addToList'>Add to Your Bucket List</label>
          <div>
-            <input  v-model='form.country_name' placeholder='Country Name' type='text' name='country_name' id='country_name' value=''>
+            <input  v-model='form.country_name' placeholder='Country Name' type='text' name='country_name' id='country_name' value='' class='add-input'>
           </div>
          <div>
-            <input v-model='form.goal_date' placeholder='Goal Date' type='text' name='goal_date' id='goal_date' value=''>
+            <input v-model='form.goal_date' placeholder='Goal Date' type='text' name='goal_date' id='goal_date' value='' class='add-input'>
           </div>
           <div>
-            <textarea  v-model='form.activities' placeholder='Activities you want to do!' type='text' name='activities' id='activities' value=''>Add activities here!</textarea>
+            <textarea  v-model='form.activities' placeholder='Activities you want to do!' type='text' name='activities' id='activities' value='' class='add-textarea'>Add activities here!</textarea>
           </div>
           <div>
-            <textarea  v-model='form.visited' placeholder='True or False' type='text' name='visited' id='visited' value=''></textarea>
+            <textarea  v-model='form.visited' placeholder='True or False' type='text' name='visited' id='visited' value='' class='add-textarea'></textarea>
           </div>
             <button type='submit' name='button'  class="country-form-button" onClick="setTimeout('history.go(0);',1000)">Add Now!</button>
             
@@ -68,7 +68,7 @@ export default {
  
 <style>
 .country-form{
-    margin-top: 120px;
+    margin-top: 60px;
 }
 
 .country-form-button{
@@ -81,5 +81,13 @@ export default {
 .country-form-button:hover{
     color: orange;
     background-color: black;
+}
+
+.add-input{
+    width: 198px;
+}
+
+.add-textarea{
+    width: 200px;
 }
 </style>

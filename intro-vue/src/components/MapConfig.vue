@@ -92,7 +92,10 @@ export default {
 </script>
 <style>
 .map-h2{
-    margin-left: -150px;
+    font-family: 'Cormorant Unicase', serif;
+    color: brown;
+    margin: 10px 0px -30px -365px;
+    text-shadow: 2px 1px black;
 }
 .gmap-maps{
     margin-bottom: 20px;

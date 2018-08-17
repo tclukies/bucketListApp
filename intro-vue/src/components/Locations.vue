@@ -39,7 +39,7 @@ export default {
  
 <style>
 .destination {
-  padding: 8px;
+  padding: 4px;
   /* border: 1px solid red; */
 }
 
@@ -48,7 +48,7 @@ export default {
   display: flex;
   flex-flow: column wrap;
   list-style-type: none;
-  margin-top: 109px;
+  margin-top: 63px;
   border: 2px solid black;
   border-radius: 5px;
   padding-bottom: 10px;
@@ -67,24 +67,25 @@ export default {
 }
 
 .destination-h3{
-  align-items: center; 
-  border: 2px solid black;
-  border-radius: 5px;
-  width: 150px;
-  background-color: rgba(247, 178, 49, 0.877);
-  color: black;
-  text-shadow: 2px 2px silver;
+    font-size: 22px;
+    align-items: center; 
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 150px;
+    background-color: rgba(247, 178, 49, 0.877);
+    color: black;
+    text-shadow: 2px 2px silver;
   
 }
 
 .destination-goalDate{
-  color: black;
-  
-  text-shadow: 2px 2px silver;
+    font-size: 18px;
+    color: black;
+    text-shadow: 2px 2px silver;
 }
 .destination-activities{
-  color: black;
-   
-  text-shadow: 2px 2px silver;
+    font-size: 18px;
+    color: black;
+    text-shadow: 2px 2px silver;
 }
 </style>
