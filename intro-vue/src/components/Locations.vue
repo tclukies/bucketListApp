@@ -52,6 +52,7 @@ export default {
   border: 2px solid black;
   border-radius: 5px;
   padding-bottom: 10px;
+  padding-top: 10px;
   
 }
 
@@ -73,17 +74,17 @@ export default {
   background-color: rgba(247, 178, 49, 0.877);
   color: black;
   text-shadow: 2px 2px silver;
-  margin-bottom: -10px;
+  
 }
 
 .destination-goalDate{
   color: black;
-  margin-bottom: -10px;
+  
   text-shadow: 2px 2px silver;
 }
 .destination-activities{
   color: black;
-   margin-bottom: -10px;
+   
   text-shadow: 2px 2px silver;
 }
 </style>

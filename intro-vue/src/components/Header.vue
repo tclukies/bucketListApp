@@ -31,6 +31,7 @@ export default {
     margin-left: 10px;
     border: 2px solid black;
     border-radius: 5px;
+    padding-bottom: 25px;
   }
 
   .header-1-logout:hover{
