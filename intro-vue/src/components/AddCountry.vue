@@ -22,64 +22,62 @@
 
 <script>
 export default {
-    name: "AddCountry",
-    data() {
-        return {
-            // location: "",
-            // activities: "",
-            postsURL: "https://travel-bug-backend.herokuapp.com/posts",
-            form: {
-                profile_id: "",
-                country_name: "",
-                goal_date: "",
-                activities: "",
-                visited: ""
+  name: "AddCountry",
+  data() {
+    return {
+      postsURL: "https://travel-bug-backend.herokuapp.com/posts",
+      form: {
+        profile_id: "",
+        country_name: "",
+        goal_date: "",
+        activities: "",
+        visited: ""
+      }
+    };
+  },
+  methods: {
+    onSubmit(evt) {
+      this.form.profile_id = this.$route.query.user;
+      evt.preventDefault();
+      return fetch(this.postsURL, {
+        method: "post",
+        headers: new Headers({ "Content-Type": "application/json" }),
+        body: JSON.stringify(this.form)
+      })
+        .then(console.log(this.form))
+        .then(resp => {
+          console.log(resp);
+          if (!resp.ok) {
+            if (resp.status >= 400 || resp.status < 500) {
+              return resp.json().then(data => {
+                const err = { errorMessage: data.message };
+                throw err;
+              });
             }
-        };
-    },
-    methods: {
-        onSubmit(evt) {
-            this.form.profile_id = this.$route.query.user;
-            evt.preventDefault();
-            return fetch(this.postsURL, {
-                method: "post",
-                headers: new Headers({ "Content-Type": "application/json" }),
-                body: JSON.stringify(this.form)
-            })
-                .then(console.log(this.form))
-                .then(resp => {
-                    console.log(resp);
-                    if (!resp.ok) {
-                        if (resp.status >= 400 || resp.status < 500) {
-                            return resp.json().then(data => {
-                                const err = { errorMessage: data.message };
-                                throw err;
-                            });
-                        }
-                        const err = { errorMessage: "Blah" };
-                        throw err;
-                    }
-                    return resp.json();
-                });
-        }
+            const err = { errorMessage: "Blah" };
+            throw err;
+          }
+          return resp.json();
+        });
     }
+  }
 };
 </script>
  
 <style>
-.country-form{
-    margin-top: 120px;
+.country-form {
+  margin-top: 120px;
 }
 
-.country-form-button{
-    color: black;
-    background-color: orange;
-    border-radius: 5px;
-    border: 2px solid black;
+.country-form-button {
+  color: black;
+  background-color: #86bbd8;
+  border-radius: 5px;
+  border: 2px solid black;
 }
 
-.country-form-button:hover{
-    color: orange;
-    background-color: black;
+.country-form-button:hover {
+  color: #5f758e;
+  background-color: black;
 }
 </style>

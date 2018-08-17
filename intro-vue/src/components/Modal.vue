@@ -17,7 +17,6 @@
             <label for='login'>New to Travel Bug?</label>
             </div>
             <div>
-            <!-- <b-button class='danger' v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</b-button> -->
             <button v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</button>
             </div>
             <div id="alertMessage"><p></p></div>
@@ -116,29 +115,52 @@ export default {
 <style scope>
 
 body {
-  background-color: rgba(247, 178, 49, 0.877);
+  background-color: #86BBD8;
+}
+
+h1 {
+  background-color: #86BBD8;
+}
+
+h3 {
+  color: #C9F0FF
 }
 
 button {
-  background-color: orange;
-  color:black;
-  border: black solid 2px;
+  background-color: #302B27;
+  color:#86BBD8;
+  border: #C9F0FF solid 2px;
    border-radius: 5px;
+}
+
+label {
+ color: #C9F0FF;
+}
+.content {
+   background-color: #86BBD8;
 }
 .modal-container {
   display: flex;
   justify-content: center;
-    background-color:orange;
+    background-color: #5F758E;
 }
 #signin {
   display: flex;
   flex-wrap: column;
 }
 
+#first {
+  background-color: #86BBD8;
+}
+
 #signButton {
-   background-color: orange;
-  color:black;
-  border: black solid 2px;
+   background-color: #302B27;
+  color: #C9F0FF;
+  border: #C9F0FF solid 2px;
   border-radius: 5px;
+}
+
+#alertMessage {
+  color: #C9F0FF;
 }
 </style>
