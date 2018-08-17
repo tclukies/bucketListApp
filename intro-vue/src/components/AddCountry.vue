@@ -73,13 +73,13 @@ export default {
 
 .country-form-button{
     color: black;
-    background-color: orange;
+    background-color: #86BBD8;
     border-radius: 5px;
     border: 2px solid black;
 }
 
 .country-form-button:hover{
-    color: orange;
+    color: #5F758E;
     background-color: black;
 }
 </style>

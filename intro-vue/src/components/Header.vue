@@ -24,20 +24,21 @@ export default {
   }
 
   .header-1-logout{
-    background-color: orange;
     align-items: center;
     height: 20px;
     margin-top: 20px;
     margin-left: 10px;
-    border: 2px solid black;
+    color: #C9F0FF;
+    background-color: #302B27;
+    border: #C9F0FF solid 2px;
     border-radius: 5px;
     padding-bottom: 25px;
   }
 
   .header-1-logout:hover{
-    color: orange;
+    color: #5F758E;
     background-color: black;
-    border: 2px solid orange;
+    border: 2px solid #5F758E;
     border-radius: 5px;
   }
 
@@ -47,7 +48,7 @@ export default {
     margin: -30px 8px 0px 0px;
     padding: 15px;
     background-color: black;
-    border: 3px solid orange;
+    border: 3px solid #5F758E;
     border-radius: 100px;
   }
 
@@ -60,7 +61,7 @@ export default {
     text-rendering: optimizeLegibility;
     color: #131313;
     /* background-color: #e7e5e4; */
-    background-color: orange;
+    background-color: #86BBD8;
     letter-spacing: .15em;
     width: 1000px;
     margin-right: 0px; 

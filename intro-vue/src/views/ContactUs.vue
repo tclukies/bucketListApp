@@ -77,7 +77,7 @@ export default {
   .contact-user{
     display:flex;
     flex-flow: column wrap;
-    border: 2px solid orange;
+    border: 2px solid #86BBD8;
     width: 30vh;
     margin: 2vh 0vh 2vh 0vh;
   }

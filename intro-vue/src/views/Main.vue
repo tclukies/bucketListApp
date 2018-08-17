@@ -39,10 +39,14 @@ export default {
 </script>
 
 <style>
+.travel-bug {
+  background-color: #86BBD8;
+}
 .horizontal {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: #C9F0FF;
 }
 .header {
   display: flex;
@@ -50,6 +54,9 @@ export default {
   background-color: #C9F0FF;
 }
 .destination {
+  background-color: #C9F0FF;
+}
+.front {
   background-color: #C9F0FF;
 }
 #main {

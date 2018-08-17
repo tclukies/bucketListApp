@@ -135,7 +135,7 @@ button {
 }
 
 label {
- color: #C9F0FF
+ color: #C9F0FF;
 }
 .content {
    background-color: #86BBD8;

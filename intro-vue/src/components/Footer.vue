@@ -19,6 +19,9 @@ export default {
 </script>
  
 <style>
+.footer {
+  background-color: #C9F0FF;
+}
   .anchor{
     text-decoration: none;
     color: #C9F0FF;
