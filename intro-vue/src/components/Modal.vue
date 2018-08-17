@@ -128,9 +128,9 @@ h3 {
 }
 
 button {
-  background-color: orange;
-  color:black;
-  border: black solid 2px;
+  background-color: #302B27;
+  color:#86BBD8;
+  border: #C9F0FF solid 2px;
    border-radius: 5px;
 }
 
@@ -143,7 +143,7 @@ label {
 .modal-container {
   display: flex;
   justify-content: center;
-    background-color: #302B27;
+    background-color: #5F758E;
 }
 #signin {
   display: flex;
@@ -155,9 +155,9 @@ label {
 }
 
 #signButton {
-   background-color: orange;
-  color:black;
-  border: black solid 2px;
+   background-color: #302B27;
+  color: #C9F0FF;
+  border: #C9F0FF solid 2px;
   border-radius: 5px;
 }
 </style>
