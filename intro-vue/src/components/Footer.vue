@@ -3,7 +3,6 @@
     <router-link to='/main' class='anchor'>Home</router-link>
     <router-link to='/about' class='anchor'>About</router-link>
     <router-link to='/faq' class='anchor'>FAQ</router-link>
-    <router-link to='/contactus' class='anchor'>Contact Us</router-link>
     </div>
 </template>
 

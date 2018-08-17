@@ -3,13 +3,8 @@
     <div>
       <h2 class="map-h2">Search the map for locations you want to visit!</h2>
       <label>
-        <!-- <gmap-autocomplete
-          @place_changed="setPlace">
-        </gmap-autocomplete> -->
-        <!-- <button @click="addMarker">Add</button> -->
       </label>
       <br/>
-
     </div>
     <br>
     <gmap-map

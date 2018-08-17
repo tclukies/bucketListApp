@@ -17,7 +17,6 @@
             <label for='login'>New to Travel Bug?</label>
             </div>
             <div>
-            <!-- <b-button class='danger' v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</b-button> -->
             <button v-on:click='seen ==! seen, logseen ==! logseen' type='submit' name='button'>Sign up now!</button>
             </div>
             <div id="alertMessage"><p></p></div>

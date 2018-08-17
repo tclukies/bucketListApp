@@ -4,7 +4,6 @@ import Front from '../views/Front';
 import Main from '../views/Main';
 import About from '../views/About';
 import FAQ from '../views/FAQ';
-import ContactUs from '../views/ContactUs';
 
 Vue.use(Router);
 
@@ -31,11 +30,6 @@ export default new Router({
       path: '/faq',
       name: 'FAQ',
       component: FAQ,
-    },
-    {
-      path: '/contactus',
-      name: 'ContactUs',
-      component: ContactUs,
     },
   ],
 })

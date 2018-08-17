@@ -63,8 +63,7 @@ export default {
   display: flex;
   flex-direction: column;
   background: cover;
-  /* height: 200vh; */
   justify-content: space-between;
-  background-color: rgba(247, 178, 49, 0.877);
+  background-color: #C9F0FF;
 }
 </style>
