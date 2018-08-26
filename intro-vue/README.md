@@ -1,7 +1,7 @@
 ## Contributors
 
 Natalie Todd
-Tom Cluckies
+Tom Clukies
 Ryan McCrory
 RJ Kirkhope
 
