@@ -53,8 +53,8 @@ export default {
 
   .travel-bug{
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-size: 92px;
-    padding: 40px 10px;
+    font-size: 42pt;
+    padding: 30px 5px;
     text-align: center;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
@@ -62,6 +62,7 @@ export default {
     background-color: #86BBD8;
     letter-spacing: .15em;
     width: 1000px;
+    height: 10vw;
     margin-right: 0px; 
     margin-top: -50px;
     text-shadow: 1px -1px 0 #767676, 

@@ -2,11 +2,7 @@
   <div>
     <div>
       <h2 class="map-h2">Search the map for locations you want to visit!</h2>
-      <label>
-      </label>
-      <br/>
     </div>
-    <br>
     <gmap-map
       :center="center"
       :zoom="2"
@@ -87,7 +83,7 @@ export default {
 </script>
 <style>
 .map-h2{
-    margin-left: -150px;
+    margin-left: -100px;
 }
 .gmap-maps{
     margin-bottom: 20px;

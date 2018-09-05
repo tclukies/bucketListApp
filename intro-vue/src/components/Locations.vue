@@ -40,6 +40,8 @@ export default {
 <style>
 .destination {
   padding: 8px;
+  height: 42vw;
+  overflow: scroll;
 }
 
 .destination-ul{
@@ -47,7 +49,6 @@ export default {
   display: flex;
   flex-flow: column wrap;
   list-style-type: none;
-  margin-top: 109px;
   border: 2px solid black;
   border-radius: 5px;
   padding-bottom: 10px;
